@@ -1,0 +1,239 @@
+*{
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    /* margin: 0; */
+}
+
+.container{
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    background-image: url(src\assets\Images\uae-panorama-dubai-ehu1enx59rbjrpb3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.logo-content{
+    align-items: center;
+    color: white;
+    display: flex;
+    z-index: 1;
+    margin: 20px;
+}
+
+.logo-img{
+    width: 90px;
+    height: 60px;
+}
+
+.horizontal-mat-list-item{
+    /* float: right; */
+    display: flex;
+    color: white;
+    gap: 15px;
+    padding: 20px;
+    font-weight: 200;
+}
+
+.horizontal-mat-list-item :hover{
+    display: flex;
+    color: rgb(239, 106, 44);
+    z-index: 2;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-weight: 200;
+    text-decoration:overline;
+
+}
+
+.backgroud{
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9; 
+}
+
+.header{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.738);
+    z-index: 20;
+}
+
+@media (max-width: 900px) {
+    .header,  .footer-content{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        /* gap: -10px; */
+    }
+
+    .grid-box{
+        max-width: 100%;
+    }
+}
+
+.home-content{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 100px;
+    padding: 0px 50px;
+}
+
+.reg-form{
+    padding: 60px 90px;
+    text-align: center;
+    margin-top: 200px;
+    background-color: rgba(0, 0, 0, 0.471);
+    margin: 10px;
+    border-radius: 20px;
+    margin-top: 230px;
+    color: rgba(90, 87, 87, 0.541);
+    gap: 30px;
+
+}
+
+.form-content{
+    align-items: center;
+    text-align: center;
+}
+
+.form-field {
+    width: 300px;
+    color: white !important;
+    font-weight: 100;
+}
+
+::ng-deep .mdc-text-field {
+    padding: 10px 19px !important;
+    color: #ffffffb7;
+    font-weight: 100;
+}
+
+.button{
+    width: 150px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.button:hover{
+    width: 180px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(183, 148, 21, 0.215);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.india-content{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding: 20px;
+    font-weight: 200;
+    margin-top: 80px;
+    /* background-color: red; */
+}
+
+h3{
+    font-weight: 400;
+}
+
+.box{
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    position: relative;
+    flex: 1;
+    /* max-width: 300px; */
+    height: auto;
+    margin: 10px;
+    background-color: rgba(47, 43, 43, 0.497);
+    cursor: pointer;
+}
+
+@media (max-width: 600px)
+{
+    .box{
+        flex: 100%;
+        max-width: 1500px;
+    }
+}
+
+@media (max-width: 1200px)
+{
+    .box{
+        flex: 40%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 400px)
+{
+    .box{
+        flex: 100%;
+        max-width: 100px;
+    }
+}
+
+.box:hover{
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.479);
+    transition-duration: 0.4s;
+    scale: 1.03;
+    text-align: center;
+    letter-spacing: 0.5px;
+    
+}
+
+.grid-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .quote-img{
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .footer-content{
+    background-color: rgb(13, 7, 25);
+    padding: 10px;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-top: 50px;
+  }
+
+  .footer-cancel{
+    width: 400px;
+  }

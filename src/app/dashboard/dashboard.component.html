@@ -1,0 +1,178 @@
+<div class="container">
+    <div class="header">
+        <div class="logo-content">
+            <div><img class="logo-img pointer" src="assets\Images\logo.png" alt=""></div>
+                <!-- <mat-label>TICK-O</mat-label> -->
+        </div>
+        <div class="horizontal-mat-list-item">
+            <mat-label (click)="scroll(home)" class="pointer">Home</mat-label>
+            <mat-label (click)="scroll(india)" class="pointer">India</mat-label>
+            <mat-label (click)="scroll(international)" class="pointer">International</mat-label>
+            <mat-label (click)="scroll(registration)" id="registration" class="pointer">Registration</mat-label>
+            <mat-label (click)="scroll(contact)" class="pointer">Contact</mat-label>
+        </div>
+    </div>
+
+    <section class="home-content" #home>
+        <!-- short description of company -->
+        <h1 class="text-primary center">Are you ready to Explore?</h1>
+        <p class="text-para center">The era of digitalization has resulted in dematerialized transactions, e-tickets, and much more.
+             <br>Piracy is violated in modern times, with effect of technological advancements.
+              Electronic tickets can be faked; the id and name can be edited using tools and techniques.
+              Our page aims to ease the crowd management preventing the forgery on the e-tickets.</p>
+    </section>
+
+    <!-- registration -->
+    <div class="reg-form" #registration>
+        <!-- Registration Form -->
+        <div class="form-content">
+            <!-- form header -->
+            <h1 class="text-primary white center">Register Now!</h1>
+            <!-- form body -->
+            <!-- <div class="form-group">
+                <mat-label>Enter your name</mat-label>
+                <input matInput type="text" name="" id="name">
+            </div> -->
+            <mat-form-field class="form-field">
+                <mat-label>Enter your Name</mat-label>
+                <input class="white" matInput type="text">
+            </mat-form-field><br>
+
+            <mat-form-field class="form-field">
+                <mat-label>Enter your Email</mat-label>
+                <input class="white" matInput type="text">
+            </mat-form-field><br>
+
+            <mat-form-field class="form-field">
+                <mat-label>Contact No</mat-label>
+                <input class="white" matInput type="number">
+            </mat-form-field><br>
+
+            <mat-form-field class="form-field">
+                <mat-label>Password</mat-label>
+                <input class="white" matInput type="password">
+            </mat-form-field>
+            
+            <br>
+            <!-- submit button -->
+            <button class="button">Submit</button>
+        </div>
+    </div>
+
+    <div #india>
+        <h1 class="india-content white">Explore India</h1>
+        <div class="grid-container">
+            <div class="grid-box">
+                <mat-card class="box">
+                    <img class="disp-img" src="https://thumbs.dreamstime.com/b/taj-mahal-agra-india-morning-light-reflection-water-uttar-pradesh-108954918.jpg" alt="">
+                    <h3>Taj Mahal</h3>
+                    <p> The Taj Mahal is an ivory-white marble mausoleum on south bank of the Yamuna river in the Indian city of Agra.It was commissioned in 1632 by the Mughal emperor,Shah Jahan (reigned from 1628 to 1658), to house the tomb of his favourite wife,Mumtaz Mahal.</p>
+                </mat-card>
+
+                <mat-card class="box">
+                    <img src="https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=">
+                    <h3>Kashmir</h3>
+                    <p> Kashmir is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century, the term "Kashmir" denoted only the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.</p>
+                </mat-card>
+
+                <mat-card class="box">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/404/633/114/5bd34ad9b11a2-wallpaper-preview.jpg" alt="">
+                    <h3>Goa</h3>
+                    <p> Goa is the smallest state in western India with coastlines of the Arabian Sea. On 30th May 1987, Goa was declared as a state of India. Goa’s capital is Panaji City; its world-class beaches, food, friendly people are the attraction of Goa.</p>
+                </mat-card>
+
+                <mat-card class="box">
+                    <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuYWxpfGVufDB8fDB8fHww&w=1000&q=80" alt="">
+                    <h3>Manali</h3>
+                    <p> The Taj Mahal is an ivory-white marble mausoleum on south bank of the Yamuna river in the Indian city of Agra.It was commissioned in 1632 by the Mughal emperor,Shah Jahan (reigned from 1628 to 1658), to house the tomb of his favourite wife,Mumtaz Mahal.</p>
+                </mat-card>
+
+                <mat-card class="box">
+                    <img src="https://wallpaperset.com/w/full/7/d/3/92422.jpg" alt="">
+                    <h3>Kerala</h3>
+                    <p>Kerala was named by TIME magazine in 2022 among the 50 extraordinary destinations to explore in its list of the World's Greatest Places. In 2023, Kerala was listed at the 13th spot in The New York Times' annual list of places to visit and was the only tourist destination listed from India.</p>
+                </mat-card>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <img class="quote-img" src="assets\Images\quote.png" alt="">
+
+    <div #international>
+        <h1 class="india-content white">Explore International</h1>
+        <div class="grid-container">
+            <div class="grid-box">
+                <mat-card class="box">
+                    <img class="disp-img" src="https://thumbs.dreamstime.com/b/taj-mahal-agra-india-morning-light-reflection-water-uttar-pradesh-108954918.jpg" alt="">
+                    <h3>Taj Mahal</h3>
+                    <p> The Taj Mahal is an ivory-white marble mausoleum on south bank of the Yamuna river in the Indian city of Agra.It was commissioned in 1632 by the Mughal emperor,Shah Jahan (reigned from 1628 to 1658), to house the tomb of his favourite wife,Mumtaz Mahal.</p>
+                </mat-card>
+
+                <mat-card class="box">
+                    <img src="https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=">
+                    <h3>Kashmir</h3>
+                    <p> Kashmir is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century, the term "Kashmir" denoted only the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.</p>
+                </mat-card>
+
+                <mat-card class="box">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/404/633/114/5bd34ad9b11a2-wallpaper-preview.jpg" alt="">
+                    <h3>Goa</h3>
+                    <p> Goa is the smallest state in western India with coastlines of the Arabian Sea. On 30th May 1987, Goa was declared as a state of India. Goa’s capital is Panaji City; its world-class beaches, food, friendly people are the attraction of Goa.</p>
+                </mat-card>
+
+                <mat-card class="box">
+                    <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuYWxpfGVufDB8fDB8fHww&w=1000&q=80" alt="">
+                    <h3>Manali</h3>
+                    <p> The Taj Mahal is an ivory-white marble mausoleum on south bank of the Yamuna river in the Indian city of Agra.It was commissioned in 1632 by the Mughal emperor,Shah Jahan (reigned from 1628 to 1658), to house the tomb of his favourite wife,Mumtaz Mahal.</p>
+                </mat-card>
+
+                <mat-card class="box">
+                    <img src="https://wallpaperset.com/w/full/7/d/3/92422.jpg" alt="">
+                    <h3>Kerala</h3>
+                    <p>Kerala was named by TIME magazine in 2022 among the 50 extraordinary destinations to explore in its list of the World's Greatest Places. In 2023, Kerala was listed at the 13th spot in The New York Times' annual list of places to visit and was the only tourist destination listed from India.</p>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+
+    <div #contact class="footer-content">
+         <div class="center footer-cancel">
+             <!-- about section -->
+             <ul id="about" class="footer-item">
+                <ul class="logo">
+                    <img class="logo-img" src="assets\Images\logo.png" alt="TICK-O">
+                    <!-- <h3 class="white">TICK-O</h3> -->
+                </ul>
+                <p class="white">Cancellation policy</p>
+                <p class="white">Ticket has a flexible cancellation policy.
+                 If you cancel or change your Monument/Museums up to 3 days before the visit,<br> you are eligible for a free refund.
+                </p>
+                     </ul>
+         </div>
+        <div>
+            <!-- contact us section -->
+            <ul id="contact" class="footer-item center">
+                <h2 class="white">Contact Us</h2>
+                <div class="white">
+                    <!-- icon -->
+                    <i class="fa fa-map-marker"></i>
+                    <p class="text-para"> TICK-O, Chennai, Tamilnadu</p>
+                </div>
+                <div class="white">
+                    <!-- icon -->
+                    <i class="fa fa-envelope"></i>
+                    <p class="text-para">ticko.info@gmail.com</p>
+                </div>
+            </ul>
+        </div>
+        <div>
+             <!-- copyright section -->
+             <ul class="footer-item " id="copyright">
+                <p class="white">2023 &copy; TICK-O, all rights reserved </p>
+            </ul>
+        </div>
+    </div>
+
+</div>

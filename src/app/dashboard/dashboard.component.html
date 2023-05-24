@@ -10,91 +10,59 @@
             <mat-label (click)="scroll(international)" class="pointer">International</mat-label>
             <mat-label (click)="scroll(registration)" id="registration" class="pointer">Registration</mat-label>
             <mat-label (click)="scroll(contact)" class="pointer">Contact</mat-label>
+            <!-- <button mat-button color="primary">Register</button>
+            <button mat-button color="primary">Sign in</button> -->
         </div>
     </div>
 
     <section class="home-content" #home>
         <!-- short description of company -->
         <h1 class="text-primary center">Are you ready to Explore?</h1>
-        <p class="text-para center">The era of digitalization has resulted in dematerialized transactions, e-tickets, and much more.
-             <br>Piracy is violated in modern times, with effect of technological advancements.
-              Electronic tickets can be faked; the id and name can be edited using tools and techniques.
-              Our page aims to ease the crowd management preventing the forgery on the e-tickets.</p>
+        <p class="text-para center">Welcome to TICK-O, your gateway to exploring the world and creating lifelong memories. Discover hidden gems, delve into local cuisines, embark on thrilling adventures, or simply unwind in serene retreats - the possibilities are endless. With our carefully curated itineraries, expert travel tips, and seamless booking services, we strive to make your travel dreams a reality. So pack your bags, Welcome to a world of exploration, discovery, and unforgettable experiences.</p> <br><br> <h2>Welcome to our travel community!</h2>
+        <img src="assets\Images\logo.png" style="width: 300px; height: 230px  px;" alt="">
     </section>
 
     <!-- registration -->
     <div class="reg-form" #registration>
         <!-- Registration Form -->
-        <div class="form-content">
+        <form class="form-content">
             <!-- form header -->
             <h1 class="text-primary white center">Register Now!</h1>
             <!-- form body -->
-            <!-- <div class="form-group">
-                <mat-label>Enter your name</mat-label>
-                <input matInput type="text" name="" id="name">
-            </div> -->
-            <mat-form-field class="form-field">
+            <mat-form-field class="form-field" appearance="fill">
                 <mat-label>Enter your Name</mat-label>
-                <input class="white" matInput type="text">
+                <input matInput type="text">
             </mat-form-field><br>
 
-            <mat-form-field class="form-field">
-                <mat-label>Enter your Email</mat-label>
-                <input class="white" matInput type="text">
-            </mat-form-field><br>
-
-            <mat-form-field class="form-field">
+            <mat-form-field class="form-field" appearance="fill">
                 <mat-label>Contact No</mat-label>
                 <input class="white" matInput type="number">
             </mat-form-field><br>
 
-            <mat-form-field class="form-field">
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Enter your Email</mat-label>
+                <input class="white" matInput type="text">
+            </mat-form-field><br>
+
+            <mat-form-field class="form-field" appearance="fill">
                 <mat-label>Password</mat-label>
                 <input class="white" matInput type="password">
             </mat-form-field>
             
             <br>
             <!-- submit button -->
-            <button class="button">Submit</button>
-        </div>
+            <button (click)="openSnackBar()" class="button">Submit</button>
+        </form>
     </div>
 
     <div #india>
         <h1 class="india-content white">Explore India</h1>
-        <div class="grid-container">
-            <div class="grid-box">
-                <mat-card class="box">
-                    <img class="disp-img" src="https://thumbs.dreamstime.com/b/taj-mahal-agra-india-morning-light-reflection-water-uttar-pradesh-108954918.jpg" alt="">
-                    <h3>Taj Mahal</h3>
-                    <p> The Taj Mahal is an ivory-white marble mausoleum on south bank of the Yamuna river in the Indian city of Agra.It was commissioned in 1632 by the Mughal emperor,Shah Jahan (reigned from 1628 to 1658), to house the tomb of his favourite wife,Mumtaz Mahal.</p>
-                </mat-card>
-
-                <mat-card class="box">
-                    <img src="https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=">
-                    <h3>Kashmir</h3>
-                    <p> Kashmir is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century, the term "Kashmir" denoted only the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.</p>
-                </mat-card>
-
-                <mat-card class="box">
-                    <img src="https://c4.wallpaperflare.com/wallpaper/404/633/114/5bd34ad9b11a2-wallpaper-preview.jpg" alt="">
-                    <h3>Goa</h3>
-                    <p> Goa is the smallest state in western India with coastlines of the Arabian Sea. On 30th May 1987, Goa was declared as a state of India. Goa’s capital is Panaji City; its world-class beaches, food, friendly people are the attraction of Goa.</p>
-                </mat-card>
-
-                <mat-card class="box">
-                    <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuYWxpfGVufDB8fDB8fHww&w=1000&q=80" alt="">
-                    <h3>Manali</h3>
-                    <p> The Taj Mahal is an ivory-white marble mausoleum on south bank of the Yamuna river in the Indian city of Agra.It was commissioned in 1632 by the Mughal emperor,Shah Jahan (reigned from 1628 to 1658), to house the tomb of his favourite wife,Mumtaz Mahal.</p>
-                </mat-card>
-
-                <mat-card class="box">
-                    <img src="https://wallpaperset.com/w/full/7/d/3/92422.jpg" alt="">
-                    <h3>Kerala</h3>
-                    <p>Kerala was named by TIME magazine in 2022 among the 50 extraordinary destinations to explore in its list of the World's Greatest Places. In 2023, Kerala was listed at the 13th spot in The New York Times' annual list of places to visit and was the only tourist destination listed from India.</p>
-                </mat-card>
+        <div class="grid-box">
+            <div class="box" *ngFor="let item of jsonData" (click)="openDetails(item)">
+              <img [src]="item.imageUrl" alt="Image" style="width: 450px; height: 300px;">
+              <h3>{{ item.name }}</h3>
+                <p> {{ item.detail }} </p>
             </div>
-
-            
         </div>
     </div>
 
@@ -102,37 +70,11 @@
 
     <div #international>
         <h1 class="india-content white">Explore International</h1>
-        <div class="grid-container">
-            <div class="grid-box">
-                <mat-card class="box">
-                    <img class="disp-img" src="https://thumbs.dreamstime.com/b/taj-mahal-agra-india-morning-light-reflection-water-uttar-pradesh-108954918.jpg" alt="">
-                    <h3>Taj Mahal</h3>
-                    <p> The Taj Mahal is an ivory-white marble mausoleum on south bank of the Yamuna river in the Indian city of Agra.It was commissioned in 1632 by the Mughal emperor,Shah Jahan (reigned from 1628 to 1658), to house the tomb of his favourite wife,Mumtaz Mahal.</p>
-                </mat-card>
-
-                <mat-card class="box">
-                    <img src="https://media.istockphoto.com/id/1323846766/photo/a-beautiful-view-of-dal-lake-in-winter-srinagar-kashmir-india.jpg?s=612x612&w=0&k=20&c=Dp3peie2t-jdLEmqe4W-DD09GACu2Cr-JjHHeB6rpBc=">
-                    <h3>Kashmir</h3>
-                    <p> Kashmir is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century, the term "Kashmir" denoted only the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.</p>
-                </mat-card>
-
-                <mat-card class="box">
-                    <img src="https://c4.wallpaperflare.com/wallpaper/404/633/114/5bd34ad9b11a2-wallpaper-preview.jpg" alt="">
-                    <h3>Goa</h3>
-                    <p> Goa is the smallest state in western India with coastlines of the Arabian Sea. On 30th May 1987, Goa was declared as a state of India. Goa’s capital is Panaji City; its world-class beaches, food, friendly people are the attraction of Goa.</p>
-                </mat-card>
-
-                <mat-card class="box">
-                    <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuYWxpfGVufDB8fDB8fHww&w=1000&q=80" alt="">
-                    <h3>Manali</h3>
-                    <p> The Taj Mahal is an ivory-white marble mausoleum on south bank of the Yamuna river in the Indian city of Agra.It was commissioned in 1632 by the Mughal emperor,Shah Jahan (reigned from 1628 to 1658), to house the tomb of his favourite wife,Mumtaz Mahal.</p>
-                </mat-card>
-
-                <mat-card class="box">
-                    <img src="https://wallpaperset.com/w/full/7/d/3/92422.jpg" alt="">
-                    <h3>Kerala</h3>
-                    <p>Kerala was named by TIME magazine in 2022 among the 50 extraordinary destinations to explore in its list of the World's Greatest Places. In 2023, Kerala was listed at the 13th spot in The New York Times' annual list of places to visit and was the only tourist destination listed from India.</p>
-                </mat-card>
+        <div class="grid-box">
+            <div class="box" *ngFor="let item1 of jsonData2" (click)="openDetails(item1)">
+                <img [src]="item1.imageUrl1" alt="Image" style="width: 450px; height: 300px;">
+                <h3>{{ item1.name1 }}</h3>
+                  <p> {{ item1.intDetail }} </p>
             </div>
         </div>
     </div>
@@ -174,5 +116,4 @@
             </ul>
         </div>
     </div>
-
 </div>

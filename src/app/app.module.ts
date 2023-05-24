@@ -33,12 +33,15 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatButtonModule} from '@angular/material/button';
+import { DetailPopupComponent } from './Shared/detail-popup/detail-popup.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    DetailPopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +82,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatPaginatorModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule
+
+    
 
   ],
   providers: [],
